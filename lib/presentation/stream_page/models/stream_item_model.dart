@@ -1,8 +1,8 @@
 import '../../../core/app_export.dart';
 
-/// This class is used in the [streamlist_item_widget] screen.
-class StreamlistItemModel {
-  StreamlistItemModel({
+/// This class is used in the [stream_item_widget] screen.
+class StreamItemModel {
+  StreamItemModel({
     this.twentySeven,
     this.rosalia,
     this.duration,
