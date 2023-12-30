@@ -1,7 +1,7 @@
-import '../stream_page/widgets/stream_item_widget.dart';
+import '../stream_page/widgets/streamlist_item_widget.dart';
 import 'bloc/stream_bloc.dart';
-import 'models/stream_item_model.dart';
 import 'models/stream_model.dart';
+import 'models/streamlist_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jonathan_s_application3/core/app_export.dart';
 
@@ -41,7 +41,7 @@ class StreamPageState extends State<StreamPage>
           child: Column(
             children: [
               SizedBox(height: 17.v),
-              _buildStream(context),
+              _buildStreamList(context),
             ],
           ),
         ),
@@ -50,7 +50,7 @@ class StreamPageState extends State<StreamPage>
   }
 
   /// Section Widget
-  Widget _buildStream(BuildContext context) {
+  Widget _buildStreamList(BuildContext context) {
     return Expanded(
       child: SizedBox(
         height: 602.v,
@@ -68,11 +68,12 @@ class StreamPageState extends State<StreamPage>
                   width: 21.h,
                 );
               },
-              itemCount: streamModelObj?.streamItemList.length ?? 0,
+              itemCount: streamModelObj?.streamlistItemList.length ?? 0,
               itemBuilder: (context, index) {
-                StreamItemModel model =
-                    streamModelObj?.streamItemList[index] ?? StreamItemModel();
-                return StreamItemWidget(
+                StreamlistItemModel model =
+                    streamModelObj?.streamlistItemList[index] ??
+                        StreamlistItemModel();
+                return StreamlistItemWidget(
                   model,
                 );
               },

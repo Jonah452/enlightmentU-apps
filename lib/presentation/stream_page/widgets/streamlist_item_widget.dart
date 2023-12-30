@@ -1,17 +1,17 @@
-import '../models/stream_item_model.dart';
+import '../models/streamlist_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jonathan_s_application3/core/app_export.dart';
 
 // ignore: must_be_immutable
-class StreamItemWidget extends StatelessWidget {
-  StreamItemWidget(
-    this.streamItemModelObj, {
+class StreamlistItemWidget extends StatelessWidget {
+  StreamlistItemWidget(
+    this.streamlistItemModelObj, {
     Key? key,
   }) : super(
           key: key,
         );
 
-  StreamItemModel streamItemModelObj;
+  StreamlistItemModel streamlistItemModelObj;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class StreamItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomImageView(
-            imagePath: streamItemModelObj?.twentySeven,
+            imagePath: streamlistItemModelObj?.twentySeven,
             height: 540.v,
             width: 356.h,
             radius: BorderRadius.circular(
@@ -49,12 +49,12 @@ class StreamItemWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        streamItemModelObj.rosalia!,
+                        streamlistItemModelObj.rosalia!,
                         style: theme.textTheme.titleLarge,
                       ),
                       SizedBox(height: 5.v),
                       Text(
-                        streamItemModelObj.duration!,
+                        streamlistItemModelObj.duration!,
                         style: CustomTextStyles.bodyMediumBluegray400,
                       ),
                     ],
@@ -78,12 +78,12 @@ class StreamItemWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        streamItemModelObj.rosalia1!,
+                        streamlistItemModelObj.rosalia1!,
                         style: theme.textTheme.titleLarge,
                       ),
                       SizedBox(height: 4.v),
                       Text(
-                        streamItemModelObj.duration1!,
+                        streamlistItemModelObj.duration1!,
                         style: CustomTextStyles.bodyMediumBluegray400,
                       ),
                     ],

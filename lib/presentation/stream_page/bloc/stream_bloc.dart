@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import '/core/app_export.dart';
-import '../models/stream_item_model.dart';
+import '../models/streamlist_item_model.dart';
 import 'package:jonathan_s_application3/presentation/stream_page/models/stream_model.dart';
 part 'stream_event.dart';
 part 'stream_state.dart';
@@ -18,13 +18,13 @@ class StreamBloc extends Bloc<StreamEvent, StreamState> {
   ) async {
     emit(state.copyWith(
         streamModelObj: state.streamModelObj?.copyWith(
-      streamItemList: fillStreamItemList(),
+      streamlistItemList: fillStreamlistItemList(),
     )));
   }
 
-  List<StreamItemModel> fillStreamItemList() {
+  List<StreamlistItemModel> fillStreamlistItemList() {
     return [
-      StreamItemModel(
+      StreamlistItemModel(
           twentySeven: ImageConstant.img27,
           rosalia: "Rosalia",
           duration: "45 minutes ago",
